@@ -26,15 +26,17 @@ Hola, esta es mi solución para la prueba que me entregaron.
 	"username": "angelmar999",
 	"passwd": "angelmartinez@",
 	"state": "ACT"
-}
-{
+}`
+
+`{
 	"id": 2,
 	"full_name": "Maria Teresa",
 	"username": "maresa101",
 	"passwd": "mariateresa@",
 	"state": "ACT"
-}
-{
+}`
+
+`{
 	"id": 3,
 	"full_name": "Mario Antonio",
 	"username": "marian404",
