@@ -9,9 +9,9 @@ function Login() {
     const [errorMsg, setErrorMsg] = useState<string>("");
     const API_URL = import.meta.env.VITE_API_URL;
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault()
-        const response = fetch(`${API_URL}/auth/login`, {
+        const response = await fetch(`${API_URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,23 +22,14 @@ function Login() {
             })
         })
 
-        const data = response.then(res => {
-            if (!res.ok) {
-                setError(true);
-                return res.text();
-            } else {
-                setError(false);
-                return res.text();
-            }
-            
-        })
-        
-        if (error) {
-            data.then(data => setErrorMsg(data));
+        if (!response.ok) {
+            setError(true);
+            const errorMsg = await response.text();
+            setErrorMsg(errorMsg);
         } else {
-            data.then(data => {
-                localStorage.setItem('token', data);
-            });
+            setError(false);
+            const token = await response.text();
+            localStorage.setItem('token', token);
             navigate("/library/books");
         }
     }
