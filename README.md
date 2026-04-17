@@ -19,6 +19,7 @@ Hola, esta es mi solución para la prueba que me entregaron.
 ## Anotaciones
 
 - La contraseña **está encriptada** por lo que en el caso de ingresar los datos del usuario, tiene que hacerse por medio de la API, los datos que yo usé fueron estos:
+
 `{
 	"id": 1,
 	"full_name": "Angel Martinez",
