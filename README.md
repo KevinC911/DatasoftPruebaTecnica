@@ -27,7 +27,6 @@ Hola, esta es mi solución para la prueba que me entregaron.
 	"passwd": "angelmartinez@",
 	"state": "ACT"
 }
-
 {
 	"id": 2,
 	"full_name": "Maria Teresa",
@@ -35,7 +34,6 @@ Hola, esta es mi solución para la prueba que me entregaron.
 	"passwd": "mariateresa@",
 	"state": "ACT"
 }
-
 {
 	"id": 3,
 	"full_name": "Mario Antonio",
