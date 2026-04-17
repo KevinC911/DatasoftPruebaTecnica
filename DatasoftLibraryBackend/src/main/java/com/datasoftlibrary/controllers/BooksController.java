@@ -19,6 +19,11 @@ public class BooksController {
         this.booksService = booksService;
     }
 
+    @GetMapping("/getAll")
+    public ResponseEntity<?> getAll() {
+        return ResponseEntity.ok(booksService.getAllBooks());
+    }
+
     @GetMapping("/byGenre")
     public ResponseEntity<?> getBooksByGenre(@RequestParam String genre) {
         List<Books> books = booksService.getBooksByGenre(genre);
@@ -46,6 +51,7 @@ public class BooksController {
                 .summary(bookInfo.getSummary())
                 .price(bookInfo.getPrice())
                 .state(bookInfo.getState())
+                .image(bookInfo.getImage())
                 .genre(bookInfo.getGenre())
                 .user(bookInfo.getUser())
                 .build();

@@ -31,6 +31,9 @@ public class Books {
     @Column
     private String state;
 
+    @Column
+    private String image;
+
     @OneToOne
     @JoinColumn(name = "gen_id", referencedColumnName = "id")
     private Genres genre;

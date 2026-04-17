@@ -23,6 +23,8 @@ public class CreateBookDTO {
 
     private String state;
 
+    private String image;
+
     private Genres genre;
 
     private User user;

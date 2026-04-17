@@ -56,7 +56,9 @@ public class AuthController {
         );
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
-        return ResponseEntity.ok(jwtUtils.generateToken(userDetails.getUsername()));
+        String token = jwtUtils.generateToken(userDetails.getUsername());
+
+        return ResponseEntity.ok(token);
 
     }
 

@@ -17,6 +17,12 @@ public class BooksService {
         this.booksRepository = booksRepository;
     }
 
+    public List<Books> getAllBooks() {
+        List<Books> books = new ArrayList<>();
+        booksRepository.findAll().forEach(books::add);
+        return books;
+    }
+
     public List<Books> getBooksByGenre(String name) {
         List<Books> books = new ArrayList<>();
         booksRepository.findAll().forEach(books::add);
